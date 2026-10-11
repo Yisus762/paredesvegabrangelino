@@ -1,0 +1,296 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #222;
+    background: #fff;
+}
+
+/* ---------- Cabecera ---------- */
+.cabecera {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 30px;
+    border-bottom: 1px solid #999;
+}
+
+.logo {
+    font-weight: bold;
+    font-size: 18px;
+    background: #eee;
+    padding: 10px 14px;
+    border-radius: 4px;
+}
+
+nav {
+    display: flex;
+}
+
+nav a {
+    text-decoration: none;
+    color: #222;
+    border: 1px solid #666;
+    padding: 6px 22px;
+    font-size: 13px;
+    background: #f3f3f3;
+}
+
+nav a:hover {
+    background: #1e6091;
+    color: #fff;
+}
+
+/* ---------- Secciones ---------- */
+.seccion {
+    max-width: 700px;
+    margin: 0 auto;
+  padding: 25px 10px;
+  text-align: center;
+}
+
+.seccion h2 {
+  font-weight: normal;
+  font-size: 18px;
+  margin-bottom: 18px;
+}
+
+#noticias,
+#formulario {
+  border-top: 1px solid #999;
+  max-width: 100%;
+}
+
+#noticias > *,
+#formulario > * {
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ---------- Slide ---------- */
+.slide {
+  position: relative;
+  max-width: 700px;
+  height: 260px;
+  margin: 15px auto 0;
+  border: 1px solid #ccc;
+  overflow: hidden;
+}
+
+.slide-item {
+  position: absolute;
+  inset: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  font-size: 48px;
+  color: #fff;
+  text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.5);
+}
+
+.slide-item.activo {
+  display: flex;
+}
+
+.puntos {
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.punto {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  border: 1px solid #222;
+  background: #fff;
+  cursor: pointer;
+}
+
+.punto.activo {
+  background: #222;
+}
+
+/* ---------- Recomendaciones ---------- */
+.tarjetas {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.tarjeta {
+  border: 1px solid #555;
+}
+
+.tarjeta .img {
+  height: 130px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 40px;
+}
+
+.tarjeta p {
+  padding: 10px;
+  font-size: 13px;
+  border-top: 1px solid #555;
+}
+
+/* ---------- Noticias ---------- */
+.noticia {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  margin-bottom: 30px;
+  text-align: left;
+}
+
+.noticia.invertida {
+  flex-direction: row-reverse;
+}
+
+.img.grande {
+  width: 250px;
+  height: 160px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 50px;
+  flex-shrink: 0;
+}
+
+.texto h3 {
+  font-weight: normal;
+  margin-bottom: 8px;
+}
+
+.texto p {
+  font-size: 13px;
+  line-height: 1.5;
+  color: #555;
+}
+
+/* ---------- Formulario ---------- */
+.form {
+  background: #ececec;
+  border: 1px solid #555;
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form input {
+  padding: 8px;
+  border: 1px solid #777;
+  border-radius: 4px;
+  font-size: 13px;
+}
+
+.form button {
+  background: #2d1a6b;
+  color: #fff;
+  border: none;
+  padding: 9px;
+  border-radius: 4px;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.form button:hover {
+  background: #44299a;
+}
+
+#mensaje {
+  font-size: 13px;
+  font-weight: bold;
+  min-height: 18px;
+}
+
+/* ---------- Tabla de contactos ---------- */
+.tabla {
+  margin: 0 auto;
+  border-collapse: collapse;
+  width: 100%;
+  max-width: 500px;
+}
+
+.tabla th,
+.tabla td {
+  border: 2px solid #000;
+  padding: 10px;
+  font-size: 13px;
+}
+
+.tabla th {
+  font-weight: bold;
+}
+
+.tabla td {
+  font-weight: bold;
+}
+
+.vacio {
+  margin-top: 15px;
+  color: #777;
+  font-size: 13px;
+}
+
+/* ---------- Footer ---------- */
+.pie {
+  border-top: 1px solid #999;
+  text-align: center;
+  padding: 15px;
+  font-size: 12px;
+  margin-top: 20px;
+}
+
+.redes {
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+  margin-bottom: 8px;
+}
+
+.redes span {
+  width: 30px;
+  height: 30px;
+  border: 1px solid #333;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 650px) {
+  .cabecera {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .tarjetas {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .noticia,
+  .noticia.invertida {
+    flex-direction: column;
+  }
+
+  .img.grande {
+    width: 100%;
+  }
+
+  .slide-item {
+    font-size: 30px;
+  }
+}

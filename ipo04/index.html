@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ParedesVega</title>
+  <!-- Favicon con la imagen del logo -->
+  <link rel="icon" type="image/png" href="img/logo.png">
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+  <main>
+
+    <!-- ================= CABECERA ================= -->
+    <header class="cabecera">
+      <img src="img/logo.png" alt="Logo de RutasPerú" class="logo">
+      <h1>RutasPerú</h1>
+    </header>
+
+    <nav class="menu">
+      <ul>
+        <li><a href="#inicio" class="activo">Inicio</a></li>
+        <li><a href="#destinos">Destinos</a></li>
+        <li><a href="#registro">Regístrate</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+
+    <!-- ================= SLIDER ================= -->
+    <section class="slider" id="inicio">
+      <img src="img/slide1.jpg" alt="Descubre el Perú" class="slide activo">
+      <img src="img/slide2.jpg" alt="Aventura y cultura" class="slide">
+      <img src="img/slide3.jpg" alt="Sabores de nuestro país" class="slide">
+      <img src="img/slide4.jpg" alt="Viaja con nosotros" class="slide">
+
+      <div class="paginacion">
+        <span class="punto activo"></span>
+        <span class="punto"></span>
+        <span class="punto"></span>
+        <span class="punto"></span>
+      </div>
+    </section>
+
+    <!-- ================= CONTENIDO ================= -->
+    <section class="contenido" id="destinos">
+      <div class="col-video">
+        <!-- CAMBIA VIDEO_ID por el código de tu video de YouTube
+            (lo que va después de v= en la URL) -->
+        <iframe src="https://www.youtube.com/embed/v4QvvSF3JfM"
+        title="Video de RutasPerú"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen></iframe>
+      </div>
+
+      <div class="col-texto">
+        <h2>Conoce el Perú con RutasPerú</h2>
+        <p>En RutasPerú organizamos viajes para que conozcas los lugares más lindos del país, desde la costa hasta la selva. Armamos paquetes con transporte, guía y hospedaje para que solo te preocupes de disfrutar.</p>
+        <p>Trabajamos con guías locales que conocen cada ruta y cada historia. Así, tu visita a Machu Picchu, Paracas o el Cañón del Colca es más segura y más cómoda, y además apoyas a las comunidades que viven en esas zonas.</p>
+        <p>Regístrate con tus datos y te enviaremos las promociones y fechas de salida más próximas.</p>
+      </div>
+    </section>
+
+    <!-- ================= PUBLICIDAD + REGISTRO ================= -->
+    <section class="registro-zona">
+      <aside class="publicidad">
+        <span>PUBLICIDAD</span>
+      </aside>
+
+      <form class="formulario" id="registro">
+        <h3>Regístrate</h3>
+        <input type="text" id="nombre" placeholder="Ingrese Nombre" required>
+        <input type="email" id="correo" placeholder="Ingrese Correo" required>
+        <input type="tel" id="celular" placeholder="Ingrese Celular" required>
+        <button type="submit">ENVIAR</button>
+        <p id="mensaje"></p>
+      </form>
+    </section>
+
+    <!-- ================= PIE DE PÁGINA ================= -->
+    <footer class="pie" id="contacto">
+      <div class="copyright">
+        <p>&copy; 2026 Brangelino Jesús Paredes Vega</p>
+        <p>Correo: <a href="mailto:jesusparedesvega07@gmail.com">jesusparedesvega07@gmail.com</a></p>
+      <p><strong>Página web: <a href="https://yisus762.github.io/paredesvegabrangelino/ipo04/" target="_blank" rel="noopener">yisus762.github.io/paredesvegabrangelino/ipo04</a></strong></p>
+      </div>
+
+      <div class="redes">
+        <a href="https://www.linkedin.com/" target="_blank" rel="noopener" title="LinkedIn">in</a>
+        <a href="https://www.facebook.com/" target="_blank" rel="noopener" title="Facebook">f</a>
+        <a href="https://twitter.com/" target="_blank" rel="noopener" title="Twitter">t</a>
+      </div>
+    </footer>
+
+  </main>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

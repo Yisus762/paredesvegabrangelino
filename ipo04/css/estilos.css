@@ -1,0 +1,329 @@
+/* ============ GENERAL ============ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Georgia, "Times New Roman", serif; /* fuente serif en todo el sitio */
+  line-height: 1.5;                               /* interlineado 1.5 */
+  color: #222;
+  /* imagen de fondo fija que cubre toda la pantalla */
+  background: url("../img/fondo.jpg") no-repeat center center fixed;
+  background-size: cover;
+}
+
+/* contenedor principal */
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 10px 20px;
+  background: rgba(255, 255, 255, 0.88);
+  min-height: 100vh;
+}
+
+a {
+  color: inherit;
+}
+
+/* ============ CABECERA ============ */
+.cabecera {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 10px 0;
+}
+
+.logo {
+  width: 80px;
+  height: 80px;
+  border: 1px solid #999;
+}
+
+.cabecera h1 {
+  font-size: 32px;
+}
+
+/* ============ MENÚ ============ */
+.menu {
+  border: 1px solid #666;
+  padding: 6px;
+}
+
+.menu ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+
+.menu li a {
+  display: block;
+  padding: 8px 28px;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: bold;
+  border: 1px solid #bbb;
+  background: #f4f4f4;
+}
+
+.menu li a.activo {
+  background: #1e88e5;
+  color: #fff;
+}
+
+.menu li a:hover {
+  background: #e76f51;
+  color: #fff;
+}
+
+/* ============ SLIDER ============ */
+.slider {
+  position: relative;
+  height: 320px;
+  overflow: hidden;
+  border: 1px solid #666;
+  border-top: none;
+}
+
+.slide {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.8s;
+}
+
+.slide.activo {
+  opacity: 1;
+}
+
+.paginacion {
+  position: absolute;
+  bottom: 14px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+}
+
+.punto {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #999;
+  cursor: pointer;
+}
+
+.punto.activo {
+  background: #dbeafe;
+  box-shadow: 0 0 0 2px #1e88e5;
+}
+
+/* ============ CONTENIDO ============ */
+.contenido {
+  display: flex;
+  gap: 25px;
+  padding: 30px 0;
+  align-items: flex-start;
+}
+
+.col-video {
+  flex: 1.3;
+}
+
+.col-video iframe {
+  width: 100%;
+  height: 320px;
+  border: 1px solid #666;
+}
+
+.col-texto {
+  flex: 1;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.col-texto h2 {
+  font-size: 17px;
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+.col-texto p {
+  margin-bottom: 14px;
+  text-align: justify;
+}
+
+/* ============ PUBLICIDAD + REGISTRO ============ */
+.registro-zona {
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 20px 0 30px;
+}
+
+.publicidad {
+  width: 230px;
+  height: 300px;
+  border: 1px solid #666;
+  padding: 10px;
+  font-size: 12px;
+  font-weight: bold;
+  background: #fafafa;
+}
+
+.formulario {
+  width: 380px;
+  border: 1px solid #333;
+  border-radius: 40px;
+  padding: 25px 35px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  background: #fff;
+}
+
+.formulario h3 {
+  text-align: center;
+  font-size: 16px;
+}
+
+.formulario input {
+  padding: 10px;
+  border: 1px solid #555;
+  border-radius: 14px;
+  font-family: inherit;
+  font-size: 14px;
+}
+
+.formulario button {
+  background: #3d4cd4;
+  color: #fff;
+  border: none;
+  padding: 12px;
+  border-radius: 12px;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.formulario button:hover {
+  background: #2a37a8;
+}
+
+#mensaje {
+  text-align: center;
+  font-size: 13px;
+  font-weight: bold;
+  min-height: 20px;
+}
+
+/* ============ PIE DE PÁGINA ============ */
+.pie {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid #999;
+  padding: 14px 0;
+  font-size: 12px;
+}
+
+.copyright {
+  text-align: left;
+}
+
+.redes {
+  display: flex;
+  gap: 8px;
+}
+
+.redes a {
+  width: 34px;
+  height: 34px;
+  border: 2px solid #222;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 15px;
+}
+
+.redes a:hover {
+  background: #1e88e5;
+  color: #fff;
+  border-color: #1e88e5;
+}
+
+/* ============ RESPONSIVE (550px o menos) ============ */
+@media (max-width: 550px) {
+
+  /* logo y nombre centrados, en columna */
+  .cabecera {
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    gap: 6px;
+  }
+
+  /* menú en columna */
+  .menu ul {
+    flex-direction: column;
+  }
+
+  .menu li a {
+    text-align: center;
+  }
+
+  /* slider más bajo */
+  .slider {
+    height: 200px;
+  }
+
+  /* video y texto en columna */
+  .contenido {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .col-video,
+  .col-texto {
+    flex: none;
+    width: 100%;
+  }
+
+  .col-video iframe {
+    height: 230px;
+  }
+
+  /* se oculta la publicidad */
+  .publicidad {
+    display: none;
+  }
+
+  .formulario {
+    width: 100%;
+    padding: 20px;
+  }
+
+  /* pie en columna: redes primero y centradas */
+  .pie {
+    flex-direction: column-reverse;
+    gap: 12px;
+    text-align: center;
+  }
+
+  .copyright {
+    text-align: center;
+  }
+
+  .redes {
+    justify-content: center;
+  }
+}
